@@ -1,10 +1,10 @@
 from flask import Flask , jsonify , request 
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-import os 
+
  
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mvbxvfulodkszn:a669f0cbf794ea2118ebaa8a533f61180a7a8dc0c37c16a474771b29ffaa4882@ec2-107-22-197-30.compute-1.amazonaws.com:5432/d6plabksbdrc6q'
 app.config['SECRET_KEY'] = "random string"
  
 db = SQLAlchemy(app)
