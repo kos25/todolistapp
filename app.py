@@ -4,7 +4,7 @@ from flask_cors import CORS
 import os 
  
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SECRET_KEY'] = "random string"
  
 db = SQLAlchemy(app)
